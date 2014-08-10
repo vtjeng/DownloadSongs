@@ -10,7 +10,8 @@ def resultSetToText(resultSet):
     intermediateSet=[result.getText().encode('ascii', 'ignore') for result in resultSet]
     return [" ".join(result.split()) for result in intermediateSet]
 
-# on the jamrock entertainment website, 2008 and 2009 are formatted slightly differently.
+# on the Jamrock entertainment website where we're extracting our data from, 2008 and 2009 are formatted slightly differently.
+# rather than write custom text for that, we just remove the relevant years.
 years=range(1950, 2011)
 years.remove(2008)
 years.remove(2009)
@@ -93,7 +94,7 @@ asRankedSong=pickle.load(open("songdict.pickle", "rb"))
 for song in asRankedSong.itervalues():
     if not song.hasLyric:
         print (song.title, song.artist)
-        
+
 ##xList=[]
 ##yList=[]
 ##cList=[]
