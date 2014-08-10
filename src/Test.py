@@ -93,7 +93,7 @@ asRankedSong=pickle.load(open("songdict.pickle", "rb"))
 for song in asRankedSong.itervalues():
     if not song.hasLyric:
         print (song.title, song.artist)
-        ## random comment
+        
 ##xList=[]
 ##yList=[]
 ##cList=[]
